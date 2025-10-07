@@ -10,20 +10,23 @@ import exit msvcrt.dll
 
 ; i.e. x=10 and y=20 => x+y+5 = 10+20+5 = 35
 
-; our data is declared here (the variables needed by our program)
+; FIRST PART OF ANY ASSEMBLY PROGRAM - data segment for data declaration
 segment data use32 class=data
     x db 10
     y db 20
     
-; our code starts here
+; SECOND PART OF ANY ASSEMBLY PROGRAM - code segment for the actual code
 segment code use32 class=code
     start:
         ; !!!!! always clean your registers!
-        mov AL, byte [x]
-        mov BL, byte [y]
+        mov EAX, 0
+        mov   , 0
+        
+        mov AL, byte [x]  ; AL = x
+        mov BL, byte [y]  ; BL = y
 
-        add AL, BL 
-        add AL, 5
+        add AL, BL        ; AL = AL + BL = x + y
+        add AL, 5         ; AL = AL + 5 = x + y + 5
     
         ; exit(0)
         push    dword 0
