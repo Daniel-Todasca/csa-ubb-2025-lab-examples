@@ -9,7 +9,7 @@ Every week folder (`week2`, `week3`) has another README\.md with useful links.
 
 
 # Course Information
-* Week 4: Laboratory Test (N1)
+* Week 5: Laboratory Test (N1)
 * Week 9: Laboratory Test (N2)
 * Week 14: Practical Exam (P)
 * During the Exam Session: Written Exam (W)

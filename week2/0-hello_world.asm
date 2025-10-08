@@ -12,21 +12,33 @@ import exit msvcrt.dll
 
 ; FIRST PART OF ANY ASSEMBLY PROGRAM - data segment for data declaration
 segment data use32 class=data
-    x db 10
-    y db 20
+    x db 10  ;  (10)10 = (A)16
+    y db 20  ;  (20)10 = 16 + 4 = (14)16
+    
+    
+; Most assembly instructions have the following syntax:
+; INSTR_NAME DEST, OPERAND
+; mov EBX, 0         EBX = 0
+
+; mov DEST, VALUE 
+; DEST and VALUE must have the same representation range (datatype)
+
+
+; mov EAX, ECX
+; CANNOT: mov EAX, BL
     
 ; SECOND PART OF ANY ASSEMBLY PROGRAM - code segment for the actual code
 segment code use32 class=code
     start:
         ; !!!!! always clean your registers!
-        mov EAX, 0
-        mov   , 0
+        mov EAX, 0 ; EAX = 0
+        mov EBX, 0 ; EBX = 0
         
-        mov AL, byte [x]  ; AL = x
-        mov BL, byte [y]  ; BL = y
+        mov AL, byte [x]  ; AL = x = 10
+        mov BL, byte [y]  ; BL = y = 20
 
-        add AL, BL        ; AL = AL + BL = x + y
-        add AL, 5         ; AL = AL + 5 = x + y + 5
+        add AL, BL        ; AL = AL + BL = x + y = 30
+        add AL, 5         ; AL = AL + 5 = x + y + 5 = 35
     
         ; exit(0)
         push    dword 0
