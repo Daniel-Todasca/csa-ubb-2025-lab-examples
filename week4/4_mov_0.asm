@@ -11,6 +11,11 @@ segment code use32 class=code
         ; TASK - move the value 0 into AX using a single line of code; bring as many examples
         
         mov AX, 0
+        xor AX, 0
+        and AX, 0
+        shl AX, 16
+        shr AX, 16
+        sal AX, 16
     
         ; exit(0)
         push    dword 0      ; push the parameter for exit onto the stack

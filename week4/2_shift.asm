@@ -15,14 +15,14 @@ segment code use32 class=code
         shl AL, 2
         mov AL, 0F0h << 2
         ; >> sample task: using SHL, multiply a number with 16
-        ; shl EAX, ?
+        shl EAX, 4
         
         ; shr - shift logical right
         mov AL, 0F0h
         shr AL, 2
         mov AL, 0F0h >> 2
         ; >> sample tash: using SHR, divide a number with 16
-        ; shr AL, ? 
+        shr AL, 4 
         
         ; sal - shift arithmetic left, the same as shl
         mov AL, 0F0h

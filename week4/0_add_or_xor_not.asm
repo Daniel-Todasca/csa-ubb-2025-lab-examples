@@ -17,7 +17,7 @@ segment code use32 class=code
         mov EAX, 00FFh & 5h
         
         ; >> sample task: using AND, compute a number from EAX using only the 3rd and 4th bit
-        ; and EAX, ?
+        and EAX, 1100b
     
         ; OR operator vs OR instruction
         mov EAX, 01h
@@ -26,7 +26,7 @@ segment code use32 class=code
         mov EAX, 001h | 4h
         
         ; >> sample task: using OR, set all bits to 1
-        ; or EAX, ?
+        or EAX, -1
         
         ; NOT operator vs NOT instruction
         mov EAX, 0FFFFFFFDh
@@ -40,7 +40,7 @@ segment code use32 class=code
         mov EAX, 05h ^ 06h
         
         ; >> sample task: using XOR, set a register to 0
-        ; xor EAX, ?
+        xor EAX, EAX
         
         ; virtual AND: does the AND instruction, without moving the result into the registers
         ; however, flags will be affected as if the instruction really took place
