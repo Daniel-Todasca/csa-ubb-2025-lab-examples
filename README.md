@@ -1,6 +1,7 @@
 # Useful Links
 * Click [here for the official course website](https://mrlini.github.io/teaching/csa/#course-requirements)
-* Click [here for lab grades & attendance](https://docs.google.com/spreadsheets/d/1I-fYo4jChFJ3PNApregc2e4iiWaKHn-V54eRPeBftJg/edit?usp=sharing)
+* Click [here for lab grades & attendance for group 911](https://docs.google.com/spreadsheets/d/1I-fYo4jChFJ3PNApregc2e4iiWaKHn-V54eRPeBftJg/edit?usp=sharing)
+* Click [here for lab grades & attendance for group 916](https://docs.google.com/spreadsheets/d/1uR4hrIGAYmUhFc9eiVOZQ4y1b_1GyhToMVs-DKUshyM/edit?usp=sharing)
 
 # How to use this repository
 You don't need to clone this repository. Use this to review and revise the examples we have done during the laboratory.
