@@ -2,43 +2,27 @@ bits 32
 global start        
 extern exit             
 import exit msvcrt.dll    
+                          
 segment data use32 class=data
     ; A word string s is given. Build the byte string d such that each element d[i] contains:
-    ; - 0 in the word s[i], if s[i] is a negative number
-    ; - 1 in the word s[i], if s[i] is a positive number
+    ; - the count of zeros in the word s[i], if s[i] is a negative number
+    ; - the count of ones in the word s[i], if s[i] is a positive number
     s dw -22, 145, -48, 127 ; in binary: 1111111111101010, 10010001, 1111111111010000, 1111111
     len equ ($-s)/2
     result resb len
- 
+
 segment code use32 class=code
     start:
         ; in the homework, when you want to build the output result:
         ; use stosb, stosw...
- 
+
         ; when you want to iterate over your input:
         ; please use lodsb, lodsw...
+		
 		mov ESI, s
 		mov EDI, result
 		mov ECX, len
-
-        while_loop_start:
-            cmp ecx, 0
-            je while_loop_end
-            lodsw ; ax = s[i]
-            cmp ax, 0
-            jg positive_nr
-            jmp negative_nr
-            positive_nr:
-                mov byte [edi], 1
-                inc edi
-                jmp end_of_interation
-            negative_nr:
-                mov byte [edi], 0
-                inc edi
-            end_of_interation:
-            dec ecx
-            jmp while_loop_start
-        while_loop_end:
+    
         ; exit(0)
         push    dword 0      ; push the parameter for exit onto the stack
         call    [exit]       ; call exit to terminate the program
