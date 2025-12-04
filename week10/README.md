@@ -12,7 +12,7 @@ Open the practice-exercises folder for more exercises if you want to practice.
 # How to run the examples - Windows
 ### a+b
 ```
-cd a+b
+cd 0-sum
 nasm -f obj main.asm
 nasm -f obj sum.asm
 alink main.obj sum.obj -oPE -subsys console -entry start
@@ -25,7 +25,7 @@ nasm -f obj main.asm ; nasm -f obj sum.asm ; alink main.obj sum.obj -oPE -subsys
 
 ### gcd
 ```
-cd gcd
+cd 1-gcd
 nasm -f obj main.asm
 nasm -f obj gcd.asm
 alink main.obj gcd.obj -oPE -subsys console -entry start
