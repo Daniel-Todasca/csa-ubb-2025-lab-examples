@@ -17,6 +17,7 @@ segment code use32 class=code
         push dword [b]
         push dword [a]
         call sum
+        add ESP, 4 * 2
 
         ; printf(&format, a, b, c)
         push EAX
