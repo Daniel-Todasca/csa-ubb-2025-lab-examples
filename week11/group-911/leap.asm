@@ -1,11 +1,10 @@
-; further reading: https://en.wikipedia.org/wiki/Leap_year_problem
-; https://en.wikipedia.org/wiki/Leap_year
+segment code use32 class=code
 
-section .text
 is_leap:
     push EBP
     lea EBP, [ESP+(4*2)]
     ; args: [EBP+0], [EBP+4], ...[EBP+(4*n)]
+
     mov EAX, [EBP]
     test EAX, 0b11
     jz .diviz4
@@ -30,3 +29,4 @@ is_leap:
     .quit:
     pop EBP
     ret
+
