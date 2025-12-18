@@ -1,5 +1,5 @@
 # Links
-- [Lab 12 theory](https://www.cs.ubbcluj.ro/~vancea/asc/en-lab12-teorie.php)
+- [Lab 12 theory](https://mrlini.github.io/teaching/csa/lab_09/)
 - [Lab 12 more theory](https://www.cs.ubbcluj.ro/~vancea/asc/en-lab12-teorie.php)
 
 ## Running the examples
